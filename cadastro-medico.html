@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+  <title>Carespot - Cadastro de Médico</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <header>
+    <!-- Início Cabeçalho -->
+    <nav class="col-12 navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a href="index.html" class="navbar-brand">
+          <img src="img/logo.png" width="142" alt="Logo Carespot" />
+        </a>
+
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="nav-principal">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="agendamento.html" class="nav-link">Agendar</a>
+            </li>
+            <li class="nav-item">
+              <a href="cadastro-medico.html" class="nav-link">Médicos</a>
+            </li>
+            <button class="btn btn-outline-info">
+              <a href="cadastro-paciente.html">Cadastrar</a>
+            </button>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- FIM Cabeçalho -->
+
+  <section id="home">
+    <!-- Início Seção Formulário -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <!-- Textos da seção -->
+          <div class="align-self-center">
+            <h1 class="display-4 mt-4 mb-4">Cadastro de médicos da Carespot Clinic</h1>
+            <form class="bg-light rounded p-4 box-shadow mb-4" action="">
+              <div class="form-group">
+                <label for="medicoNome">Nome</label>
+                <input type="text" class="form-control" id="medicoNome" name="medicoNome" placeholder="Ciclano Roxano">
+              </div>
+              <div class="form-group">
+                <label for="medicoCRM">CRM</label>
+                <input type="number" class="form-control" id="medicoCRM" name="medicoCRM" placeholder="52.89669-1">
+              </div>
+              <div class="form-group">
+                <label for="medicoTelefone">Telefone</label>
+                <input type="tel" class="form-control" id="medicoTelefone" name="medicoTelefone"
+                  placeholder="11 98080-8080">
+              </div>
+              <div class="form-group">
+                <label for="medicoEspecialidade">Especialidade</label>
+                <select id="medicoEspecialidade" name="medicoEspecialidade" id="medicoEspecialidade"
+                  class="custom-select">
+                  <option selected>--- Selecione ---</option>
+                  <option value="clinica">Clínica Médica</option>
+                  <option value="dermatologia">Dermatologia</option>
+                  <option value="oftalmologia">Oftalmologia</option>
+                  <option value="ortopedia">Ortopedia</option>
+                  <option value="pediatria">Pediatria</option>
+                </select>
+              </div>
+              <button type="submit" onclick="cadastraMedico()" class="btn btn-primary">Cadastrar</button>
+            </form>
+          </div>
+        </div>
+        <!-- FIM Textos da Seção -->
+      </div>
+    </div>
+  </section>
+  <!-- FIM Seção Formulário -->
+
+  <footer class="mt-4 mb-4">
+    <!-- Início do Footer -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <p>
+            <a href="index.html">Home</a>
+            <a href="agendamento.html">Agendar</a>
+            <a href="cadastro-medico.html">Médicos</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- FIM do Footer -->
+
+  <!-- Linkando bibliotecas -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

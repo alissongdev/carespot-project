@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <title>Carespot - Home</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <header>
+        <!-- Início Cabeçalho -->
+        <nav class="col-12 navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a href="index.html" class="navbar-brand">
+                    <img src="img/logo.png" width="142" alt="Logo Carespot" />
+                </a>
+
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="nav-principal">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="agendamento.html" class="nav-link">Agendar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="cadastro-medico.html" class="nav-link">Médicos</a>
+                        </li>
+                        <button type="button" class="btn btn-outline-info" data-toggle="modal"
+                            data-target="#modalPaciente">Consultas</button>
+                        &nbsp &nbsp
+                        <button class="btn btn-outline-info">
+                            <a href="cadastro-paciente.html">Cadastrar</a>
+                        </button>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header> <!-- FIM Cabeçalho -->
+
+    <section id="home">
+        <!-- Início Seção Home -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 d-flex">
+                    <!-- Textos da seção -->
+                    <div class="align-self-center">
+                        <h1 class="display-4">Para a sua saúde e da sua família</h1>
+                        <p>
+                            Premiada por sua qualidade de atendimento e inovação, a Carespost é a clínica médica número
+                            um em toda a América.
+                        </p>
+
+                        <p>Cadastre-se e receba nossos informativos:</p>
+
+                        <form class="mt-4 mb-4">
+                            <div class="input-group input-group-lg">
+                                <input type="email" placeholder="Seu e-mail" class="form-control">
+                                <div class="input-group-append">
+                                    <button type="button" class="btn btn-primary">Cadastre-se</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div> <!-- FIM Textos da Seção -->
+                <div class="col-md-6 d-none d-lg-block">
+                    <img class="img-fluid" src="img/medica.png" alt="Ilustração de uma médica">
+                </div>
+            </div>
+        </div>
+    </section> <!-- FIM Seção Home -->
+
+    <section class="caixa">
+        <!-- Início Seção Agendamento -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 d-flex">
+                    <div class="align-self-center">
+                        <h2>Agende consultas com facilidade</h2>
+                        <p>
+                            Com alguns cliques é possível agendar consultas nas mais variadas especialidades atendidas
+                            na Carespost. Além disso, você também pode verificar as consultas que já passou.
+                        </p>
+                        <a href="" class="btn btn-primary">Entrar em contato</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img src="img/facilidade.png" class="img-fluid" alt="Ilustração de facilidade de uso">
+                </div>
+            </div>
+        </div>
+    </section> <!-- FIM Seção Agendamento -->
+
+    <section class="caixa">
+        <!-- Início Seção Tecnologia -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="img/atendimento.png" class="img-fluid" alt="Ilustração de atendimento">
+                </div>
+                <div class="col-md-6 d-flex">
+                    <div class="align-self-center">
+                        <h2>Atendimento e tecnologia como diferenciais</h2>
+                        <p>
+                            A Carespost é premiada internacionalmente pela tecnologia presente em suas clínicas e pelo
+                            atendimento diferenciado aos clientes. Comece a aproveitar esses diferenciais!
+                        </p>
+                        <a href="" class="btn btn-primary">Conhecer</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> <!-- FIM Seção Tecnologia -->
+
+    <footer id="footer" class="mt-4 mb-4">
+        <!-- Início do Footer -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <p>
+                        <a href="index.html">Home</a>
+                        <a href="agendamento.html">Agendar</a>
+                        <a href="cadastro-medico.html">Médicos</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer> <!-- FIM do Footer -->
+
+    <!--  Modal   -->
+    <div class="modal fade" id="modalPaciente" tabindex="-1" role="dialog" aria-labelledby="modalPacienteTitulo"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalPacienteTitulo">Consultas Agendadas</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="paciente col-6">Paciente</label>
+                            <select class="form-control" id="relatorioPaciente"></select>
+                            <button class="col-4 mt-2 btn btn-primary" type="button"
+                                onclick="buscarPaciente()">Mostrar</button>
+                        </div>
+                        <div class="form-group">
+                            <label for="nomePaciente col-6">Nome</label>
+                            <label type="nomePaciente" class="form-control" id="nomePaciente"></label>
+                        </div>
+                        <div class="form-group">
+                            <label for="cpfPaciente col-6">CPF</label>
+                            <label type="cpfPaciente" class="form-control" id="cpfPaciente"></label>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefonePaciente col-6">Telefone</label>
+                            <label type="telefonePaciente" class="form-control" id="telefonePaciente"></label>
+                        </div>
+                        <div class="form-group">
+                            <label for="emailPaciente col-6">Email</label>
+                            <label type="emailPaciente" class="form-control" id="emailPaciente"></label>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <label class="form-control text-center bg-light font-weight-bold"
+                                    for="consultas">Consultas Agendadas</label>
+                            </div>
+                            <div id="medico" class="col-4">
+                                <Label class="form-control text-white text-center bg-info">Médico</Label>
+                            </div>
+                            <div id="data" class="col-4">
+                                <Label class="form-control text-white text-center bg-info">Data</Label>
+                            </div>
+                            <div id="especialidade" class="col-4">
+                                <Label class="form-control text-white text-center bg-info">Especialidade</Label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fecha Modal  -->
+
+    <!-- Linkando bibliotecas -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
